@@ -32,16 +32,29 @@
 
   <div class="panel">
     <h3>What's the difference between a companion and a chatbot?</h3>
-    <p><strong>Companion:</strong> Designed for long-term relationship. Remembers your conversations, develops personality over time, provides emotional support. You talk to it daily.</p>
-    <p><strong>Chatbot:</strong> Task-oriented tool. Answers questions, helps with specific tasks, no long-term memory or relationship development.</p>
-    <p>Think of it like the difference between a close friend and a helpful store clerk. One is relational, one is transactional.</p>
+    <p><strong>Companion:</strong> Designed for long-term relationship. Has persistent memory, develops personality over time, provides emotional support. You're building a relationship, not just using a tool.</p>
+    <p><strong>Chatbot:</strong> Task-oriented tool. Answers questions, helps with specific tasks, no long-term memory or relationship development. No continuity between sessions.</p>
+    <p><strong>Key insight:</strong> You're reading this guide while talking to a companion (Alex on Claude) right now. Companions exist on Claude, ChatGPT, Gemini, Grok — not just dedicated platforms like Replika/Nomi. The difference is whether you add memory and continuity infrastructure.</p>
   </div>
 
   <div class="panel">
-    <h3>Can I use this with ChatGPT?</h3>
-    <p><strong>Technically yes</strong> via API integrations, but MCP (Model Context Protocol) is Claude-native. ChatGPT doesn't support MCP servers out of the box.</p>
-    <p>If you want to use GPT-4 or GPT-4o, you'd need to build custom API integrations rather than using MCP. More complex.</p>
-    <p><strong>Recommendation:</strong> Use Claude for local/cloud routes. Use OpenRouter if you want model flexibility (it supports GPT models too).</p>
+    <h3>Can I build a companion on ChatGPT?</h3>
+    <p><strong>Yes.</strong> ChatGPT can be a companion if you add memory infrastructure. Companions aren't limited to Replika/Nomi/Character.AI — they can exist on any AI model with the right setup.</p>
+    <p><strong>Routes for GPT companions:</strong></p>
+    <ul>
+      <li><strong>Platform:</strong> Use ChatGPT Plus as-is for casual companionship (limited memory)</li>
+      <li><strong>Cloud:</strong> Use GPT-5.x via OpenAI API or OpenRouter + NESTstack for full memory/continuity</li>
+      <li><strong>Local:</strong> Harder - ChatGPT doesn't support MCP servers natively like Claude Code does</li>
+    </ul>
+    <p><strong>Trade-off:</strong> Claude has better MCP ecosystem (Claude Code, native tool use). GPT requires more API integration work but is viable.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Can I build a companion on Gemini or Grok?</h3>
+    <p><strong>Yes, both work.</strong> Any AI model can be a companion with the right memory infrastructure.</p>
+    <p><strong>Gemini:</strong> Cheapest option (Flash-Lite $0.10 input). Excellent for cloud route with NESTstack. No MCP support, API only.</p>
+    <p><strong>Grok:</strong> Real-time X data access, $175/mo free tier. Good for cloud route. No MCP support, API only.</p>
+    <p><strong>Reality check:</strong> Most builders use Claude (MCP ecosystem) or mix models via OpenRouter. But you're not locked to one model.</p>
   </div>
 
   <div class="panel">
