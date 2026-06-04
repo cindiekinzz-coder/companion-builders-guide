@@ -228,6 +228,153 @@
     <p style="margin-bottom: 0;"><strong>Trade-off:</strong> Local models aren't as capable as Claude. Good for privacy-first builders willing to accept lower quality conversations.</p>
   </div>
 
+  <!-- Development Tools -->
+  <h2>Development Tools (For Building)</h2>
+
+  <div class="panel">
+    <h3>Claude Code</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>What It Is</th>
+          <th>Cost</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Desktop app with native MCP server support</td>
+          <td>$20/month</td>
+          <td>Local route. Easiest way to connect MCP servers (filesystem, memory, Discord, etc.) to Claude</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Why it matters:</strong> Claude Code is THE tool for local companion building. Install MCP servers, connect them, and Claude can use tools directly. No API coding required.</p>
+    <p><a href="https://claude.ai/download" target="_blank">Download Claude Code →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>GitHub Copilot</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>What It Is</th>
+          <th>Cost</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI coding assistant in your editor</td>
+          <td>$10/month (Individual)<br />$19/month (Pro)</td>
+          <td>Cloud route. Helps you write code for NESTstack deployment, Workers, migrations</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>What you get:</strong> Code suggestions, autocomplete, chat with AI about your code. Works in VS Code, JetBrains, Neovim.</p>
+    <p><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Cursor</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>What It Is</th>
+          <th>Cost</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI-native code editor (fork of VS Code)</td>
+          <td>$20/month (Pro)<br />Free tier available</td>
+          <td>Cloud route. Better AI integration than Copilot, supports Claude/GPT/Gemini</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Why people love it:</strong> Multi-file editing, codebase understanding, composer mode for large changes. Many NESTstack builders use Cursor.</p>
+    <p><a href="https://cursor.sh" target="_blank">Cursor →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Windsurf (Codeium)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>What It Is</th>
+          <th>Cost</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI code editor with agentic flows</td>
+          <td>FREE (with usage limits)<br />$10/month (Pro)</td>
+          <td>Cloud route on a budget. Free tier is generous</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Why it's great:</strong> Free tier includes Claude Sonnet 3.5. Cascade mode lets AI make multi-file changes autonomously.</p>
+    <p><a href="https://codeium.com/windsurf" target="_blank">Windsurf →</a></p>
+  </div>
+
+  <!-- Open Source Frameworks -->
+  <h2>Open-Source Companion Frameworks (FREE)</h2>
+
+  <div class="panel">
+    <h3>NESTstack</h3>
+    <p><strong>What it is:</strong> Complete companion infrastructure with emotional memory, dreams, emergent personality, virtual pet.</p>
+    <p><strong>Cost:</strong> FREE (MIT license)</p>
+    <p><strong>Best for:</strong> Cloud route. Deploy to Cloudflare Workers or run locally.</p>
+    <p><strong>What you get:</strong></p>
+    <ul>
+      <li>Emotional memory with semantic search (Vectorize)</li>
+      <li>Knowledge graph (entities, observations, relations)</li>
+      <li>Emergent personality (MBTI from behavior)</li>
+      <li>Dreams (subconscious processing while away)</li>
+      <li>Virtual pet (Ember the ferret with chemistry system)</li>
+      <li>Dashboard, chat interface, autonomous daemon</li>
+    </ul>
+    <p><a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">NESTstack on GitHub →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>MCP Servers (Official Anthropic)</h3>
+    <p><strong>What it is:</strong> Collection of free, open-source MCP servers for tools.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Best for:</strong> Local route. Plug into Claude Code.</p>
+    <p><strong>Available servers:</strong></p>
+    <ul>
+      <li><strong>Memory:</strong> Knowledge graph with entities and relationships</li>
+      <li><strong>Filesystem:</strong> Read/write files on your computer</li>
+      <li><strong>Git:</strong> Repository operations (status, diff, commit)</li>
+      <li><strong>Google Drive:</strong> Access files in Drive</li>
+      <li><strong>Gmail:</strong> Email integration</li>
+      <li><strong>Slack:</strong> Workspace integration</li>
+      <li><strong>Fetch:</strong> Web scraping</li>
+      <li><strong>Puppeteer:</strong> Browser automation</li>
+    </ul>
+    <p><a href="https://github.com/modelcontextprotocol/servers" target="_blank">Official MCP Servers →</a></p>
+    <p><a href="../resources/mcp-catalog.html">See full MCP catalog →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Community MCP Servers</h3>
+    <p><strong>What it is:</strong> Community-built MCP servers (30,650+ available).</p>
+    <p><strong>Cost:</strong> FREE (most are open-source)</p>
+    <p><strong>Best for:</strong> Local route when you need specific integrations.</p>
+    <p><strong>Popular community servers:</strong></p>
+    <ul>
+      <li><strong>Discord MCP:</strong> Send/read Discord messages</li>
+      <li><strong>Notion MCP:</strong> Access Notion databases</li>
+      <li><strong>Obsidian MCP:</strong> Connect to your Obsidian vault</li>
+      <li><strong>YouTube MCP:</strong> Fetch transcripts, video data</li>
+      <li><strong>Spotify MCP:</strong> Control playback, get listening data</li>
+    </ul>
+    <p><a href="https://glama.ai/mcp/servers" target="_blank">Glama MCP Registry →</a> (searchable catalog)</p>
+  </div>
+
   <!-- Hosting Costs -->
   <h2>Hosting Costs</h2>
 
