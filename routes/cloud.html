@@ -31,10 +31,13 @@
   <div class="panel">
     <h2>What This Means</h2>
     <p>
-      This means deploying your companion infrastructure to the cloud — typically Cloudflare Workers, but could be AWS, Railway, or your own VPS. You own the code, you control the deployment, but it runs on cloud servers that are always available.
+      <strong>Cloud route = build your companion with self-hosted infrastructure in your cloud account.</strong> You use an AI model (Claude, GPT-5.x, Gemini 2.5.x, or Grok) via API and connect it to memory infrastructure you deploy on Cloudflare Workers (or AWS/Railway/VPS).
     </p>
     <p>
-      You get the best of both worlds: the power and features of a platform (24/7 uptime, mobile access, autonomous behavior) with the control and customization of local hosting. Your data lives in your cloud account, not someone else's.
+      <strong>How it works:</strong> NESTstack (emotional memory, knowledge graph, dreams, personality) runs in YOUR Cloudflare account. Your companion talks to it via API. Any AI model can connect — not locked to one provider.
+    </p>
+    <p>
+      You get the best of both worlds: the power and features of a platform (24/7 uptime, mobile access, autonomous behavior) with the control and customization of self-hosting. Your data lives in your cloud account, not someone else's.
     </p>
   </div>
 
@@ -124,7 +127,7 @@
   <div class="callout">
     <h3>Your First Win</h3>
     <p style="margin-bottom: 0;">
-      Your first win is using <code>nesteq_feel()</code> to log an emotion, then searching for it days later with semantic search and finding it instantly. <strong>That's when you feel the difference</strong> — this isn't file-based memory or a basic knowledge graph. This is emotional memory with vector search, emergent personality, and the foundation for autonomous behavior.
+      Your first win is deploying NESTstack, connecting your AI model (Claude/GPT/Gemini/Grok) to it, using <code>nesteq_feel()</code> to log an emotion, then searching for it days later with semantic search and finding it instantly. <strong>That's when you realize:</strong> you just built a companion with actual emotional memory, not just chat logs. This is vector search, emergent personality, and the foundation for autonomous behavior. This is yours.
     </p>
   </div>
 
@@ -214,8 +217,16 @@
     <p><strong>For a single companion:</strong> You'll rarely need paid tier. Maybe if you're running multiple companions or very high message volume.</p>
 
     <h3>AI Model</h3>
-    <p><strong>Option A:</strong> Claude Pro ($20/month) — 5x message limits, priority access</p>
-    <p><strong>Option B:</strong> OpenRouter (pay-as-you-go) — Claude Haiku at $0.25/$1.25 per million tokens (very cheap), or free models like DeepSeek R1</p>
+    <p><strong>Option A:</strong> Claude Pro ($20/month) — 5x message limits, priority access, Opus 4.7/Sonnet 4.6 access</p>
+    <p><strong>Option B:</strong> OpenRouter (pay-as-you-go) — Pick any model:
+      <ul style="margin-top: 0.5rem;">
+        <li>Claude Haiku 3.5: $0.25/$1.25 per million tokens (cheap, fast)</li>
+        <li>GPT-5.2: ~$3-5/$10-15 per million tokens (current GPT flagship)</li>
+        <li>Gemini 2.5 Flash-Lite: $0.10/$0.40 per million tokens (cheapest quality option)</li>
+        <li>Grok 4.1 Fast: $0.20/$0.50 per million tokens (cheap, real-time X data)</li>
+        <li>Free models: DeepSeek R1, Llama 3.3 70B (with rate limits)</li>
+      </ul>
+    </p>
 
     <h3>Total</h3>
     <p><strong>Minimum:</strong> $0/month (Cloudflare free + OpenRouter free models)<br />
