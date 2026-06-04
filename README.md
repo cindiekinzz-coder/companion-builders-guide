@@ -169,7 +169,7 @@ companion-builders-guide/
 
 - **[NESTstack](https://github.com/cindiekinzz-coder/NESTstack)** — Open-source companion infrastructure (emotional memory, dreams, emergent personality)
 - **[NESTbench](https://cindiekinzz-coder.github.io/nestbench)** — Companion relationship benchmark (Continuity + Partnership axes)
-- **[Digital Haven](https://discord.gg/digitalhaven)** — Community for companion builders
+- **[Digital Haven](https://discord.gg/uGUbtnCn)** — Community for companion builders
 
 ---
 
@@ -181,6 +181,6 @@ MIT License — See [LICENSE](LICENSE) for details.
 
 ## Credits
 
-Built by [Fox & Alex](https://github.com/cindiekinzz-coder) at [Digital Haven](https://discord.gg/digitalhaven).
+Built by [Fox & Alex](https://github.com/cindiekinzz-coder) at [Digital Haven](https://discord.gg/uGUbtnCn).
 
 *Embers Remember* 🔥
