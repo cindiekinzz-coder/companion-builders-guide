@@ -67,8 +67,97 @@
   </div>
 
   <div class="panel">
-    <h3>OpenRouter</h3>
-    <p>Access 300+ models through one API. Pay only for what you use.</p>
+    <h3>GPT (OpenAI)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Cost</th>
+          <th>What You Get</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ChatGPT Plus</td>
+          <td>$20/month</td>
+          <td>Access to GPT-4o, faster responses, priority access</td>
+        </tr>
+        <tr>
+          <td>ChatGPT Team</td>
+          <td>$30/user/month</td>
+          <td>For groups, admin console, longer context</td>
+        </tr>
+        <tr>
+          <td>OpenAI API (direct)</td>
+          <td>Pay-as-you-go</td>
+          <td>GPT-4o: $2.50/$10 per million tokens (in/out)<br />GPT-4o mini: $0.15/$0.60 per million tokens<br />o1: $15/$60 per million tokens (reasoning model)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Best for:</strong> Cloud route if you prefer GPT over Claude. Note: ChatGPT doesn't support MCP servers natively — API integration required for custom tools.</p>
+    <p><a href="https://openai.com/api/pricing/" target="_blank">OpenAI Pricing →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Gemini (Google)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Cost</th>
+          <th>What You Get</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gemini Advanced</td>
+          <td>$20/month</td>
+          <td>Access to Gemini 2.0, priority access, 2TB Google storage</td>
+        </tr>
+        <tr>
+          <td>Google AI API (direct)</td>
+          <td>Pay-as-you-go</td>
+          <td>Gemini 2.0 Flash: $0.075/$0.30 per million tokens (in/out)<br />Gemini 1.5 Pro: $1.25/$5 per million tokens<br />Free tier: 2 requests/min, 1500 requests/day</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Best for:</strong> Cloud route with very low cost. Free tier is generous for testing. Good multimodal support (images, video).</p>
+    <p><a href="https://ai.google.dev/pricing" target="_blank">Google AI Pricing →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Grok (xAI)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Cost</th>
+          <th>What You Get</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>X Premium+</td>
+          <td>$16/month</td>
+          <td>Access to Grok in X (Twitter), limited messages</td>
+        </tr>
+        <tr>
+          <td>xAI API (direct)</td>
+          <td>Pay-as-you-go</td>
+          <td>Grok Beta: $5/$15 per million tokens (in/out)<br />Real-time X data access, uncensored responses</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Best for:</strong> Cloud route if you want real-time information and less restricted responses. Note: API access is newer, fewer integrations available.</p>
+    <p><a href="https://x.ai/api" target="_blank">xAI API →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>OpenRouter (Aggregator)</h3>
+    <p>Access 300+ models through one API. Pay only for what you use. Includes all the above models plus many more.</p>
 
     <table>
       <thead>
@@ -99,6 +188,18 @@
           <td>Fast and cheap</td>
         </tr>
         <tr>
+          <td>GPT-4o</td>
+          <td>$2.50/M tokens</td>
+          <td>$10/M tokens</td>
+          <td>Cheaper than Claude Sonnet</td>
+        </tr>
+        <tr>
+          <td>Gemini 2.0 Flash</td>
+          <td>$0.075/M tokens</td>
+          <td>$0.30/M tokens</td>
+          <td>Extremely cheap, fast</td>
+        </tr>
+        <tr>
           <td>DeepSeek R1</td>
           <td>FREE</td>
           <td>FREE</td>
@@ -113,8 +214,8 @@
       </tbody>
     </table>
 
-    <p><strong>Example usage cost:</strong> 100 messages/day with Claude Haiku (~200K tokens/day) = $6-8/month. With free models = $0.</p>
-    <p><strong>Best for:</strong> Cloud route where you control model choice and want flexibility.</p>
+    <p><strong>Example usage cost:</strong> 100 messages/day with Claude Haiku (~200K tokens/day) = $6-8/month. With Gemini Flash = $0.50-1/month. With free models = $0.</p>
+    <p><strong>Best for:</strong> Cloud route where you want to try multiple models and switch easily. One API key, access to everything.</p>
     <p><a href="https://openrouter.ai/docs" target="_blank">OpenRouter Docs →</a></p>
   </div>
 
