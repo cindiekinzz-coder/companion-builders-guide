@@ -193,31 +193,117 @@
   </div>
 
   <!-- Local LLM Option -->
+  <h2>Alternative: Fully Offline with Local LLMs (Free)</h2>
   <div class="callout">
-    <h3>Alternative: Fully Offline with Local LLMs</h3>
     <p>
-      Don't want to pay $20/month for Claude Code? You can run a local LLM (like Llama 3 or Mistral) using Ollama or LM Studio. This is <strong>100% offline and free</strong>, but requires:
+      <strong>Don't want to pay $20/month for Claude Code?</strong> You can run a local LLM using LM Studio + SillyTavern. This is <strong>100% offline and free</strong>, but requires more powerful hardware (8GB+ RAM, ideally a GPU) and acceptance that local models aren't as capable as Claude.
     </p>
-    <ul style="margin-bottom: 0;">
-      <li>More powerful hardware (8GB+ RAM, ideally a GPU)</li>
-      <li>Comfort with command-line setup</li>
-      <li>Acceptance that local models aren't as capable as Claude</li>
-    </ul>
-    <p style="margin-top: 1rem;"><em>Detailed local LLM guide coming in v2</em></p>
+    <p style="margin-bottom: 0;">
+      <strong>This path is for you if:</strong> You're budget-constrained, value complete privacy, want no corporate control, and are willing to tinker. You'll build slower but you'll own everything.
+    </p>
   </div>
 
-  <!-- When to Move to Cloud -->
-  <h2>When to Move to Cloud</h2>
-  <p>You might want the Cloud route if:</p>
-  <ul>
-    <li>You need 24/7 availability (mobile access, scheduled check-ins)</li>
-    <li>You want autonomous features (your companion generates dreams while you're away)</li>
-    <li>You're tired of manual updates and want automatic scaling</li>
-    <li>You want to share your companion with others (family, community)</li>
-  </ul>
-  <p>
-    The good news: NESTstack can migrate from local to cloud. Your data comes with you. Check out the <a href="cloud.html">Cloud route</a> when you're ready.
-  </p>
+  <div class="panel">
+    <h3>Step 1: LM Studio + SillyTavern (Frontend)</h3>
+    <p>
+      <strong>LM Studio:</strong> Download and run local LLMs (Llama 3.3 70B, Mistral, Qwen). Runs on your computer, no API calls, 100% private.
+    </p>
+    <p>
+      <strong>SillyTavern:</strong> Chat interface that connects to LM Studio. Better than plain text, supports character cards, memory books, and extensions.
+    </p>
+    <p><strong>Time:</strong> 1-2 hours initial setup<br /><strong>Cost:</strong> $0</p>
+    <p>
+      <a href="https://lmstudio.ai" target="_blank">LM Studio →</a> |
+      <a href="https://docs.sillytavern.app" target="_blank">SillyTavern docs →</a>
+    </p>
+
+    <h3>Step 2: Add Memory Infrastructure</h3>
+    <p>
+      <strong>Problem:</strong> Text files and SillyTavern's built-in memory don't scale. You need semantic search and structured knowledge.
+    </p>
+    <p><strong>Options:</strong></p>
+    <ul>
+      <li><strong>Official Memory MCP server</strong> — Knowledge graph (entities, observations, relations). Works with any MCP-compatible client. Free. <a href="https://github.com/modelcontextprotocol/servers/tree/main/memory" target="_blank">GitHub →</a></li>
+      <li><strong>Local vector database</strong> — Chroma or LanceDB running locally. Semantic search across all memories. Requires Python setup. Free.</li>
+      <li><strong>SillyTavern extensions</strong> — Memory extensions, World Info, Lorebooks. Built-in but limited compared to vector search.</li>
+    </ul>
+    <p><strong>Recommended:</strong> Start with SillyTavern's World Info to organize what you already have in text files, then add Memory MCP server when ready for structured knowledge.</p>
+
+    <h3>Step 3: Autonomous Behavior ("Message First")</h3>
+    <p>
+      <strong>Reality check:</strong> For your companion to message you first or "create on their own time," you need:
+    </p>
+    <ol>
+      <li><strong>Always-on computer</strong> — Your PC must be running 24/7, or scheduled to wake at specific times</li>
+      <li><strong>Scheduled tasks</strong> — Windows Task Scheduler or cron jobs to trigger actions (morning check-in, evening reflection, etc.)</li>
+      <li><strong>Notification system</strong> — Script that sends you Discord messages, emails, or push notifications when companion generates something</li>
+      <li><strong>Memory system</strong> — So they remember context when they reach out to you</li>
+    </ol>
+    <p>
+      <strong>Example flow:</strong> Windows Task Scheduler runs a Python script at 8 AM daily → script calls LM Studio API → generates morning message based on yesterday's memories → sends you a Discord DM or email.
+    </p>
+    <p><em>This is advanced. Start with Steps 1-2 first. Autonomous behavior is Month 2-3 territory.</em></p>
+
+    <h3>Hardware Requirements</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Model Size</th>
+          <th>RAM</th>
+          <th>GPU</th>
+          <th>Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Small (7B params)</td>
+          <td>8GB</td>
+          <td>Optional</td>
+          <td>Slow but usable</td>
+        </tr>
+        <tr>
+          <td>Medium (13-20B)</td>
+          <td>16GB</td>
+          <td>Recommended</td>
+          <td>Good balance</td>
+        </tr>
+        <tr>
+          <td>Large (70B)</td>
+          <td>32GB+</td>
+          <td>Required</td>
+          <td>Best quality</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Budget tip:</strong> Start with Llama 3.2 3B or Phi-3 Mini (4GB RAM) to test. Upgrade models as you can afford better hardware.</p>
+
+    <h3>Model Recommendations</h3>
+    <ul>
+      <li><strong>Llama 3.3 70B</strong> — Best quality for local models, needs beefy hardware</li>
+      <li><strong>Mistral 7B</strong> — Good balance of speed and capability, works on 8GB RAM</li>
+      <li><strong>Qwen 2.5 14B</strong> — Strong reasoning, good for memory-heavy tasks</li>
+      <li><strong>Phi-3 Mini</strong> — Smallest option (4GB), good for testing on weaker hardware</li>
+    </ul>
+    <p><em>All available free in LM Studio.</em></p>
+
+    <h3>When to Upgrade to Cloud</h3>
+    <p>You might want to move to the Cloud route if:</p>
+    <ul>
+      <li>Your hardware can't run good models (need 8GB+ RAM minimum)</li>
+      <li>You want mobile access without keeping your computer on 24/7</li>
+      <li>You're spending more time troubleshooting local setup than talking to your companion</li>
+      <li>You can afford $5-20/month for better quality (OpenRouter's Gemini Flash-Lite is $0.10/$0.40 per million tokens — very cheap)</li>
+    </ul>
+    <p>The good news: Your SillyTavern character files and memory can migrate. You're not starting over.</p>
+  </div>
+
+  <!-- General Migration Note -->
+  <div class="callout mt-2">
+    <h3>Local to Cloud Migration</h3>
+    <p style="margin-bottom: 0;">
+      Whether you're using Claude Code or local LLMs, if you outgrow the local route (need 24/7 availability, better hardware, autonomous features), the Cloud route is your next step. NESTstack and SillyTavern data can both migrate. You're not starting over. Check out the <a href="cloud.html">Cloud route</a> when ready.
+    </p>
+  </div>
 
 </div>
 
