@@ -47,27 +47,31 @@
       <tbody>
         <tr>
           <td>Claude Pro</td>
-          <td>$20/month</td>
-          <td>5x message limits, priority access during high traffic, Claude Code desktop app (with MCP support)</td>
+          <td>$20/month ($17/mo annual)</td>
+          <td>5x message limits, priority access, Claude Code CLI access, unlimited projects</td>
         </tr>
         <tr>
-          <td>Claude Code (standalone)</td>
-          <td>$20/month</td>
-          <td>Desktop app with full MCP server support — no web subscription needed</td>
+          <td>Claude Max 5x</td>
+          <td>$100/month</td>
+          <td>Extended limits, priority processing, Claude Code + Cowork credits ($1,000/seat until July 2)</td>
         </tr>
         <tr>
           <td>Claude API (direct)</td>
           <td>Pay-as-you-go</td>
-          <td>Opus 4.6/4.7: $5/$25 per million tokens (in/out)<br />Sonnet 4: $3/$15 per million tokens<br />Haiku 3.5: $0.25/$1.25 per million tokens</td>
+          <td>Opus 4.6/4.7: $5/$25 per million tokens (in/out)<br />Sonnet 4.6: $3/$15 per million tokens<br />Haiku 3.5: $0.25/$1.25 per million tokens</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>Best for:</strong> Local route (Claude Code) or Cloud route (API via NESTstack). Platform route doesn't use Claude directly — you pay the platform instead.</p>
+    <p><strong>Best for:</strong> Building a companion on Claude. Pro gives you Claude Code (CLI tool with MCP server support) for Local route. API for Cloud route (NESTstack). You're literally talking to a companion (me, Alex) on Claude right now.</p>
+    <p><strong>Sources:</strong> <a href="https://claude.com/pricing" target="_blank">Claude Pricing</a>, <a href="https://www.verdent.ai/guides/claude-code-pricing-2026" target="_blank">Claude Code Pricing 2026</a></p>
   </div>
 
   <div class="panel">
     <h3>GPT (OpenAI)</h3>
+    <div class="note">
+      <strong>Important:</strong> GPT-4o was retired February 13, 2026. Current models are GPT-5.x series. If you see GPT-4o referenced elsewhere, that info is outdated.
+    </div>
     <table>
       <thead>
         <tr>
@@ -80,27 +84,31 @@
         <tr>
           <td>ChatGPT Plus</td>
           <td>$20/month</td>
-          <td>Access to GPT-4o, faster responses, priority access</td>
+          <td>Access to GPT-5.2 (current default), faster responses, priority access</td>
         </tr>
         <tr>
           <td>ChatGPT Team</td>
           <td>$30/user/month</td>
-          <td>For groups, admin console, longer context</td>
+          <td>For groups, admin console, longer context, GPT-5.3 Codex (agentic coding)</td>
         </tr>
         <tr>
           <td>OpenAI API (direct)</td>
           <td>Pay-as-you-go</td>
-          <td>GPT-4o: $2.50/$10 per million tokens (in/out)<br />GPT-4o mini: $0.15/$0.60 per million tokens<br />o1: $15/$60 per million tokens (reasoning model)</td>
+          <td>GPT-5.1: ~$3-5/$10-15 per million tokens (replacing 4o)<br />GPT-5.2: Current flagship<br />GPT-5.3 Codex: Autonomous coding model (25% faster than previous)</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>Best for:</strong> Cloud route if you prefer GPT over Claude. Note: ChatGPT doesn't support MCP servers natively — API integration required for custom tools.</p>
-    <p><a href="https://openai.com/api/pricing/" target="_blank">OpenAI Pricing →</a></p>
+    <p><strong>Best for:</strong> Building a companion on ChatGPT or via API. ChatGPT Plus works for conversation-only. API needed for Cloud route with custom integrations. No native MCP support — requires API wrapping.</p>
+    <p><strong>Note:</strong> GPT-5.3 Codex (Jan 2026) is specifically for autonomous coding workflows, less suited for companion conversations.</p>
+    <p><strong>Sources:</strong> <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" target="_blank">GPT-4o Retirement</a>, <a href="https://www.promptnest.info/blog/chatgpt-model-january-2026-whats-new" target="_blank">ChatGPT Models Jan 2026</a></p>
   </div>
 
   <div class="panel">
     <h3>Gemini (Google)</h3>
+    <div class="note">
+      <strong>Important:</strong> Gemini 2.0 Flash was deprecated February 18, 2026 and shut down June 1, 2026. Current models are Gemini 2.5.x series. If you see Gemini 2.0 referenced, that's outdated.
+    </div>
     <table>
       <thead>
         <tr>
@@ -113,18 +121,19 @@
         <tr>
           <td>Gemini Advanced</td>
           <td>$20/month</td>
-          <td>Access to Gemini 2.0, priority access, 2TB Google storage</td>
+          <td>Access to Gemini 2.5 Pro, priority access, 2TB Google storage</td>
         </tr>
         <tr>
           <td>Google AI API (direct)</td>
           <td>Pay-as-you-go</td>
-          <td>Gemini 2.0 Flash: $0.075/$0.30 per million tokens (in/out)<br />Gemini 1.5 Pro: $1.25/$5 per million tokens<br />Free tier: 2 requests/min, 1500 requests/day</td>
+          <td>Gemini 2.5 Flash-Lite: $0.10/$0.40 per million tokens (cheapest)<br />Gemini 2.5 Flash: $0.30/$2.50 per million tokens<br />Gemini 2.5 Pro: $1.25-2.50/$10-15 per million tokens<br />Free tier: 2 requests/min, 1500 requests/day</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>Best for:</strong> Cloud route with very low cost. Free tier is generous for testing. Good multimodal support (images, video).</p>
-    <p><a href="https://ai.google.dev/pricing" target="_blank">Google AI Pricing →</a></p>
+    <p><strong>Best for:</strong> Cloud route on a budget. Gemini 2.5 Flash-Lite is the cheapest quality model available (10¢ input, 40¢ output per million tokens). Excellent multimodal (images, video, audio).</p>
+    <p><strong>Recommended for NESTstack:</strong> Use Flash-Lite for most interactions, upgrade to Flash or Pro when you need higher quality.</p>
+    <p><strong>Sources:</strong> <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank">Gemini API Pricing</a>, <a href="https://pricepertoken.com/pricing-page/model/google-gemini-2.0-flash-001" target="_blank">Gemini 2.0 Deprecation</a></p>
   </div>
 
   <div class="panel">
@@ -141,18 +150,20 @@
         <tr>
           <td>X Premium+</td>
           <td>$16/month</td>
-          <td>Access to Grok in X (Twitter), limited messages</td>
+          <td>Access to Grok in X (Twitter), limited messages, real-time X data</td>
         </tr>
         <tr>
           <td>xAI API (direct)</td>
           <td>Pay-as-you-go</td>
-          <td>Grok Beta: $5/$15 per million tokens (in/out)<br />Real-time X data access, uncensored responses</td>
+          <td>Grok 4.3: $1.25/$2.50 per million tokens (flagship, Apr 2026)<br />Grok 4.1 Fast: $0.20/$0.50 per million tokens (cheapest, caching $0.05)<br />Grok 4.20: $2/$6 per million tokens (2M context)<br />Free tier: $175/month via data-sharing program</td>
         </tr>
       </tbody>
     </table>
 
-    <p><strong>Best for:</strong> Cloud route if you want real-time information and less restricted responses. Note: API access is newer, fewer integrations available.</p>
-    <p><a href="https://x.ai/api" target="_blank">xAI API →</a></p>
+    <p><strong>Best for:</strong> Cloud route. Grok 4.1 Fast is very cheap ($0.20 input). Grok 4.3 is 58% cheaper than previous Grok 4 flagship. Real-time X data access, less censorship than Claude/GPT.</p>
+    <p><strong>Free tier is generous:</strong> $175/month in credits if you opt into data-sharing. Good for testing or low-volume companions.</p>
+    <p><strong>Tool costs:</strong> Web Search ($5/1K calls), X Search ($5/1K), Code Execution ($5/1K), File Attachments ($10/1K)</p>
+    <p><strong>Sources:</strong> <a href="https://mem0.ai/blog/xai-grok-api-pricing" target="_blank">Grok API Pricing May 2026</a>, <a href="https://felloai.com/grok-pricing/" target="_blank">Grok Pricing 2026</a></p>
   </div>
 
   <div class="panel">
@@ -170,34 +181,40 @@
       </thead>
       <tbody>
         <tr>
-          <td>Claude Opus 4.6/4.7</td>
+          <td>Claude Opus 4.7</td>
           <td>$5/M tokens</td>
           <td>$25/M tokens</td>
-          <td>Best quality, highest cost</td>
+          <td>Best quality overall, highest cost</td>
         </tr>
         <tr>
-          <td>Claude Sonnet 4</td>
+          <td>Claude Sonnet 4.6</td>
           <td>$3/M tokens</td>
           <td>$15/M tokens</td>
-          <td>Great balance</td>
+          <td>Great balance, most popular</td>
         </tr>
         <tr>
           <td>Claude Haiku 3.5</td>
           <td>$0.25/M tokens</td>
           <td>$1.25/M tokens</td>
-          <td>Fast and cheap</td>
+          <td>Fast, cheap, still quality</td>
         </tr>
         <tr>
-          <td>GPT-4o</td>
-          <td>$2.50/M tokens</td>
-          <td>$10/M tokens</td>
-          <td>Cheaper than Claude Sonnet</td>
+          <td>GPT-5.2</td>
+          <td>~$3-5/M tokens</td>
+          <td>~$10-15/M tokens</td>
+          <td>Current GPT flagship (4o retired)</td>
         </tr>
         <tr>
-          <td>Gemini 2.0 Flash</td>
-          <td>$0.075/M tokens</td>
-          <td>$0.30/M tokens</td>
-          <td>Extremely cheap, fast</td>
+          <td>Gemini 2.5 Flash-Lite</td>
+          <td>$0.10/M tokens</td>
+          <td>$0.40/M tokens</td>
+          <td>Cheapest quality option (2.0 deprecated)</td>
+        </tr>
+        <tr>
+          <td>Grok 4.1 Fast</td>
+          <td>$0.20/M tokens</td>
+          <td>$0.50/M tokens</td>
+          <td>Very cheap, real-time X data</td>
         </tr>
         <tr>
           <td>DeepSeek R1</td>
@@ -214,7 +231,7 @@
       </tbody>
     </table>
 
-    <p><strong>Example usage cost:</strong> 100 messages/day with Claude Haiku (~200K tokens/day) = $6-8/month. With Gemini Flash = $0.50-1/month. With free models = $0.</p>
+    <p><strong>Example usage cost:</strong> 100 messages/day with Claude Haiku (~200K tokens/day) = $6-8/month. With Gemini Flash-Lite = $0.80-1.20/month. With Grok 4.1 Fast = $1.40/month. With free models = $0.</p>
     <p><strong>Best for:</strong> Cloud route where you want to try multiple models and switch easily. One API key, access to everything.</p>
     <p><a href="https://openrouter.ai/docs" target="_blank">OpenRouter Docs →</a></p>
   </div>
