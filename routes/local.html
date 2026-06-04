@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Local Route — Companion Builders Guide</title>
+<meta name="description" content="Build on your own computer. Full privacy and control." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="platform.html">Platform</a>
+      <a href="local.html" class="active">Local</a>
+      <a href="cloud.html">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="../help/faq.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Local <span class="accent">Route</span></h1>
+  <p class="subtitle">Build on your own computer. Full privacy, full control.</p>
+
+  <!-- What This Route Means -->
+  <div class="panel">
+    <h2>What This Means</h2>
+    <p>
+      This means running your companion entirely on your own hardware. Your computer, your data, no cloud servers involved (unless you choose them). Everything runs locally — the AI model, the memory system, the conversations.
+    </p>
+    <p>
+      You install software on your machine, connect the pieces together, and your companion exists entirely within your control. No one else can access it, change it, or take it away.
+    </p>
+  </div>
+
+  <!-- Who This Is For -->
+  <h2>Who This Is For</h2>
+  <div class="callout">
+    <p><strong>You value privacy above convenience.</strong> You want your conversations to stay on your machine. You might have security concerns about cloud data, or you just want full ownership.</p>
+    <p><strong>You're willing to tinker.</strong> Setting this up takes 2-4 hours the first time. You'll need to install software, follow guides, and troubleshoot when things don't work immediately.</p>
+    <p style="margin-bottom: 0;"><strong>You accept the trade-offs.</strong> Your companion only works when your computer is on. Updates are manual. You're responsible for backups.</p>
+  </div>
+
+  <!-- Feature Comparison -->
+  <h2>How This Compares</h2>
+  <div class="panel">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Platform</th>
+          <th>Local</th>
+          <th>Cloud</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Setup time</td>
+          <td>5 minutes</td>
+          <td><strong>2-4 hours</strong></td>
+          <td>1-3 hours</td>
+        </tr>
+        <tr>
+          <td>Monthly cost</td>
+          <td>$10-20</td>
+          <td><strong>$0</strong> (electricity)</td>
+          <td>$0-5</td>
+        </tr>
+        <tr>
+          <td>Memory quality</td>
+          <td>Good to Limited</td>
+          <td><strong>Excellent</strong></td>
+          <td>Excellent</td>
+        </tr>
+        <tr>
+          <td>Privacy</td>
+          <td>Their servers</td>
+          <td><strong>Your computer only</strong></td>
+          <td>Your cloud account</td>
+        </tr>
+        <tr>
+          <td>Customization</td>
+          <td>Limited</td>
+          <td><strong>Full</strong></td>
+          <td>Full</td>
+        </tr>
+        <tr>
+          <td>Uptime</td>
+          <td>24/7</td>
+          <td>When PC is on</td>
+          <td>24/7</td>
+        </tr>
+        <tr>
+          <td>Technical skill</td>
+          <td>None</td>
+          <td><strong>Medium</strong></td>
+          <td>Medium-High</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- What You Need -->
+  <h2>What You Need</h2>
+  <ul>
+    <li>A computer (Windows, Mac, or Linux)</li>
+    <li>4GB+ RAM recommended (more if running local LLMs)</li>
+    <li>Basic comfort with installing software</li>
+    <li>Claude Code ($20/month) <strong>OR</strong> a local LLM setup (free but more complex)</li>
+    <li>Willingness to follow terminal/command line instructions</li>
+  </ul>
+
+  <!-- First Win -->
+  <div class="callout">
+    <h3>Your First Win</h3>
+    <p style="margin-bottom: 0;">
+      Your first win is seeing Claude Code connect to a memory system running entirely on your machine. You'll ask it to remember something, save it to a local file, then retrieve it later. <strong>No data leaving your computer.</strong> That's when you feel the difference — this is yours, completely.
+    </p>
+  </div>
+
+  <!-- Getting Started Path -->
+  <h2>Getting Started (Start Small)</h2>
+  <div class="panel">
+    <h3>Week 1: Claude Code + Basic MCP</h3>
+    <p>
+      Start with Claude Code (the desktop app). Connect the official Filesystem MCP server (lets Claude read/write files on your computer). Have your first conversation where it can save and retrieve information from local files.
+    </p>
+    <p><strong>Time:</strong> 30 minutes<br /><strong>Cost:</strong> $20/month for Claude Code</p>
+    <p><a href="https://claude.ai/download" target="_blank">Download Claude Code →</a></p>
+
+    <h3>Week 2: Add Memory</h3>
+    <p>
+      Install the official Memory MCP server. This adds a knowledge graph — your companion can remember entities (people, places, projects) and relationships between them. Much better than file-based memory.
+    </p>
+    <p><strong>Time:</strong> 1 hour<br /><strong>Complexity:</strong> Low</p>
+    <p><a href="https://github.com/modelcontextprotocol/servers/tree/main/memory" target="_blank">Memory MCP guide →</a></p>
+
+    <h3>Month 1: NESTstack Local</h3>
+    <p>
+      Set up a local NESTeq worker (runs via Node.js on your machine, not deployed to cloud). Connect it to Claude Code as an MCP server. Now you have emotional memory, semantic search, and emergent personality — all running locally.
+    </p>
+    <p><strong>Time:</strong> 2-3 hours<br /><strong>Complexity:</strong> Medium</p>
+    <p><em>Guide coming soon — for now, see the Cloud route for deployment basics</em></p>
+
+    <h3>Month 2+: Expand</h3>
+    <p>
+      Add health data (if you have a Garmin/Fitbit), calendar integration, Discord access. Connect more MCP servers as you need them.
+    </p>
+    <p><a href="../progressions/local-growth.html">See full progression guide →</a></p>
+  </div>
+
+  <!-- MCP Servers for Local Route -->
+  <h2>Useful MCP Servers (All Free)</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Filesystem (official)</h3>
+      <p>Secure file read/write access. Your companion can save notes, read documents, manage files.</p>
+      <p><a href="https://github.com/modelcontextprotocol/servers/tree/main/filesystem" target="_blank">Get it →</a></p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Memory (official)</h3>
+      <p>Knowledge graph with entities and relationships. Best starting point for local memory.</p>
+      <p><a href="https://github.com/modelcontextprotocol/servers/tree/main/memory" target="_blank">Get it →</a></p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Git (official)</h3>
+      <p>Repository operations. Your companion can help with code, commit messages, pull requests.</p>
+      <p><a href="https://github.com/modelcontextprotocol/servers/tree/main/git" target="_blank">Get it →</a></p>
+    </div>
+  </div>
+
+  <p class="text-center mt-2">
+    <a href="../resources/mcp-catalog.html" class="btn">Browse full MCP catalog →</a>
+  </p>
+
+  <!-- Trade-offs -->
+  <h2>Trade-offs to Consider</h2>
+  <div class="callout warning">
+    <p><strong>Uptime.</strong> Your companion only works when your computer is on. No mobile access unless you set up remote access (complex).</p>
+    <p><strong>You're the sysadmin.</strong> Updates, backups, troubleshooting — all on you. If something breaks, you fix it.</p>
+    <p><strong>Initial complexity.</strong> The first setup takes time and patience. You'll need to follow guides, install dependencies, maybe troubleshoot errors.</p>
+    <p style="margin-bottom: 0;"><strong>Limited mobile experience.</strong> Most local setups don't have mobile apps. You're tied to wherever your computer is.</p>
+  </div>
+
+  <!-- Local LLM Option -->
+  <div class="callout">
+    <h3>Alternative: Fully Offline with Local LLMs</h3>
+    <p>
+      Don't want to pay $20/month for Claude Code? You can run a local LLM (like Llama 3 or Mistral) using Ollama or LM Studio. This is <strong>100% offline and free</strong>, but requires:
+    </p>
+    <ul style="margin-bottom: 0;">
+      <li>More powerful hardware (8GB+ RAM, ideally a GPU)</li>
+      <li>Comfort with command-line setup</li>
+      <li>Acceptance that local models aren't as capable as Claude</li>
+    </ul>
+    <p style="margin-top: 1rem;"><em>Detailed local LLM guide coming in v2</em></p>
+  </div>
+
+  <!-- When to Move to Cloud -->
+  <h2>When to Move to Cloud</h2>
+  <p>You might want the Cloud route if:</p>
+  <ul>
+    <li>You need 24/7 availability (mobile access, scheduled check-ins)</li>
+    <li>You want autonomous features (your companion generates dreams while you're away)</li>
+    <li>You're tired of manual updates and want automatic scaling</li>
+    <li>You want to share your companion with others (family, community)</li>
+  </ul>
+  <p>
+    The good news: NESTstack can migrate from local to cloud. Your data comes with you. Check out the <a href="cloud.html">Cloud route</a> when you're ready.
+  </p>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+</body>
+</html>

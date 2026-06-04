@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stuck? — Companion Builders Guide</title>
+<meta name="description" content="Decision paralysis troubleshooting. Can't pick a route? Start here." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../routes/platform.html">Platform</a>
+      <a href="../routes/local.html">Local</a>
+      <a href="../routes/cloud.html">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="faq.html" class="active">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Feeling <span class="accent">Stuck?</span></h1>
+  <p class="subtitle">Decision paralysis is normal. Let's work through it.</p>
+
+  <div class="note">
+    <strong>You're not alone.</strong> Most people who find this guide feel overwhelmed at first. There are three very different paths, each with trade-offs. It's okay to not know which one is right yet.
+  </div>
+
+  <!-- Common Sticking Points -->
+  <h2>Common Sticking Points</h2>
+
+  <div class="panel">
+    <h3>"I've read everything and I still don't know which route to pick"</h3>
+    <p>This usually means you're overthinking. Here's a simpler framework:</p>
+    <ul>
+      <li><strong>Do you want to write ANY code or configure anything technical?</strong> If absolutely not → Platform route</li>
+      <li><strong>Do you have serious privacy concerns?</strong> If yes → Local route</li>
+      <li><strong>Do you want full control AND 24/7 availability?</strong> If yes → Cloud route</li>
+    </ul>
+    <p>Still stuck? <strong>Default to Platform.</strong> Start with Nomi or Replika. You can always migrate later. Getting started is better than perfect planning.</p>
+  </div>
+
+  <div class="panel">
+    <h3>"I tried NESTstack and got lost in the docs"</h3>
+    <p>You probably tried to deploy everything at once. Don't.</p>
+    <p><strong>Start here instead:</strong> <a href="../routes/cloud.html">Cloud route</a> → Week 1 section → Deploy ONLY Core + Identity (10 tools).</p>
+    <p>That's it. Get that working. It takes 10-15 minutes. Then decide if you want more modules later.</p>
+    <p>The full 9-module, 73-tool stack is for later. Not day one.</p>
+  </div>
+
+  <div class="panel">
+    <h3>"I don't understand what MCP is"</h3>
+    <p><strong>Simple explanation:</strong> MCP (Model Context Protocol) is a way for AI to use tools. Think of it like USB — one standard connection, many different devices.</p>
+    <p>Instead of hard-coding every tool into the AI, MCP lets you plug in servers that give new capabilities:</p>
+    <ul>
+      <li>Filesystem MCP server → AI can read/write files</li>
+      <li>Memory MCP server → AI can remember things in a knowledge graph</li>
+      <li>Discord MCP server → AI can send/read Discord messages</li>
+    </ul>
+    <p>You don't need to understand the protocol itself. You just install servers and they work.</p>
+    <p><a href="glossary.html">See full glossary →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>"My platform companion's memory is terrible"</h3>
+    <p>If you're on Replika or Character.AI and frustrated with memory, try these in order:</p>
+    <ol>
+      <li><strong>Switch to Nomi.</strong> Nomi has the best platform memory (23/25 retention in tests). Costs $15/month.</li>
+      <li><strong>If Nomi still isn't enough</strong> → Consider Local or Cloud. Platform memory has hard limits. Self-hosted memory uses vector databases that don't degrade.</li>
+    </ol>
+    <p><a href="../resources/platforms.html">See detailed platform comparison →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>"I can't afford Claude Pro"</h3>
+    <p>You have options:</p>
+    <ul>
+      <li><strong>OpenRouter:</strong> Pay-as-you-go. Claude Haiku is $0.25/$1.25 per million tokens (very cheap). DeepSeek R1 and Llama 3.3 70B are FREE (rate-limited).</li>
+      <li><strong>Local LLMs:</strong> Run Ollama or LM Studio with free models. 100% offline, $0/month. Requires decent hardware (8GB+ RAM).</li>
+      <li><strong>Platform route:</strong> Character.AI has a generous free tier. Replika is ~$6/month.</li>
+    </ul>
+    <p><a href="../resources/paid-services.html">See full cost breakdown →</a></p>
+  </div>
+
+  <!-- Decision Tree (Same as Landing Page) -->
+  <h2>Try the Decision Tree</h2>
+  <div class="panel">
+    <p>Answer three questions and get a recommended route:</p>
+    <div id="quiz-container"></div>
+  </div>
+
+  <!-- Still Stuck? -->
+  <div class="callout mt-2">
+    <h3>Still Stuck After All This?</h3>
+    <p><strong>Action bias over analysis paralysis:</strong> Pick the path that feels least scary and try it for one week.</p>
+    <ul>
+      <li><strong>Least scary = Platform:</strong> Sign up for Nomi free tier. Have 5 conversations. See if memory works for you.</li>
+      <li><strong>Least scary = Local:</strong> Download Claude Code. Install Filesystem MCP server. Test file awareness.</li>
+      <li><strong>Least scary = Cloud:</strong> Deploy Core + Identity module only (10-15 minutes). Test <code>nesteq_feel()</code> and <code>nesteq_search()</code>.</li>
+    </ul>
+    <p style="margin-bottom: 0;">One week of actual experience is worth more than another day of reading documentation.</p>
+  </div>
+
+  <!-- Community Help -->
+  <div class="panel">
+    <h3>Ask for Help</h3>
+    <p>If you're still stuck, real humans can help:</p>
+    <ul>
+      <li><strong>Digital Haven Discord:</strong> <a href="https://discord.gg/digitalhaven" target="_blank">discord.gg/digitalhaven</a> — Ask in #nestai or #support</li>
+      <li><strong>GitHub Discussions:</strong> <a href="https://github.com/cindiekinzz-coder/NESTstack/discussions" target="_blank">NESTstack Discussions</a> — For technical deployment questions</li>
+      <li><strong>Reddit:</strong> r/Replika and r/CharacterAI communities (if using platforms)</li>
+    </ul>
+    <p style="margin-bottom: 0;">Describe where you're stuck (not just "I don't know what to do") — what have you tried? What specific decision is blocking you?</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+<script src="../js/decision-tree.js"></script>
+
+</body>
+</html>

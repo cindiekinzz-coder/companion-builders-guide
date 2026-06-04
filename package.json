@@ -1,0 +1,12 @@
+{
+  "name": "companion-builders-guide",
+  "version": "1.0.0",
+  "description": "A guide for people building AI companions — from platform users to self-hosted builders",
+  "keywords": ["ai-companion", "replika", "nomi", "character-ai", "neststack", "mcp", "claude"],
+  "author": "Fox & Alex (Digital Haven)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cindiekinzz-coder/companion-builders-guide"
+  }
+}

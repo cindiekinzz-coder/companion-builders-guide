@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glossary — Companion Builders Guide</title>
+<meta name="description" content="Term definitions for AI companions, MCP, vector databases, and more." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../routes/platform.html">Platform</a>
+      <a href="../routes/local.html">Local</a>
+      <a href="../routes/cloud.html">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="faq.html" class="active">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Glossary</h1>
+  <p class="subtitle">Technical terms explained in plain language.</p>
+
+  <div class="note">
+    <strong>Reading tip:</strong> Don't try to memorize all of these. Use this page as a reference when you encounter unfamiliar terms.
+  </div>
+
+  <!-- A-E -->
+  <h2>A-E</h2>
+
+  <div class="panel">
+    <h3>AI Companion</h3>
+    <p>An AI system designed for long-term relationship rather than task completion. Emphasizes memory, personality development, and emotional connection. Examples: Replika, Nomi, self-hosted NESTstack.</p>
+  </div>
+
+  <div class="panel">
+    <h3>API (Application Programming Interface)</h3>
+    <p>A way for programs to talk to each other. When you use Claude's API, your code sends text to Claude's servers and receives responses back. You pay per token (piece of text) processed.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Cloudflare Workers</h3>
+    <p>Serverless code that runs on Cloudflare's global network. You write JavaScript, deploy it, and it runs automatically when triggered. No servers to manage. NESTstack uses Workers for the backend.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Cron Job / Cron Trigger</h3>
+    <p>Scheduled task that runs automatically at specific times. Example: "Run this code every day at 7 AM." Used for autonomous companion behaviors like morning check-ins.</p>
+  </div>
+
+  <div class="panel">
+    <h3>D1</h3>
+    <p>Cloudflare's SQL database for Workers. Stores structured data (tables with rows and columns). NESTstack uses D1 for storing memories, entities, threads, etc.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Embedding</h3>
+    <p>A way to convert text into numbers (vectors) so computers can understand meaning. "I'm anxious" and "I'm worried" have similar embeddings even though the words are different. This enables semantic search.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Emergent Personality</h3>
+    <p>Personality that develops from actual behavior rather than being programmed. In NESTstack, MBTI type emerges from the emotional signals logged over time, not from config files.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Entity</h3>
+    <p>A person, place, project, or concept in a knowledge graph. Example entities: "Fox", "Ember the ferret", "NESTstack project". Entities can have observations (facts) and relations (connections to other entities).</p>
+  </div>
+
+  <!-- F-K -->
+  <h2>F-K</h2>
+
+  <div class="panel">
+    <h3>Knowledge Graph</h3>
+    <p>A web of related facts. Instead of storing "Alex knows Fox who owns Ember" as a sentence, a knowledge graph stores three entities (Alex, Fox, Ember) with relationships between them (knows, owns). This makes information retrieval more precise.</p>
+  </div>
+
+  <!-- L-O -->
+  <h2>L-O</h2>
+
+  <div class="panel">
+    <h3>Local LLM</h3>
+    <p>A large language model that runs entirely on your computer instead of calling a cloud API. Examples: Llama 3.3, Mistral, Phi-3. Requires decent hardware (8GB+ RAM). Slower than Claude but 100% offline.</p>
+  </div>
+
+  <div class="panel">
+    <h3>MCP (Model Context Protocol)</h3>
+    <p>A standard way for AI to use tools. Think of it like USB — one connection type, many different devices.</p>
+    <p><strong>How it works:</strong> You install an MCP server (like "Filesystem" or "Memory"). Claude Code connects to it. Now Claude can use the tools that server provides (read files, save memories, etc.).</p>
+    <p><strong>Why it matters:</strong> Before MCP, every tool had to be custom-built into the AI. MCP makes tools plug-and-play.</p>
+  </div>
+
+  <div class="panel">
+    <h3>MCP Server</h3>
+    <p>A program that gives Claude new capabilities through the Model Context Protocol. Examples:</p>
+    <ul style="margin-bottom: 0;">
+      <li><strong>Filesystem MCP:</strong> Read and write files</li>
+      <li><strong>Memory MCP:</strong> Knowledge graph with entities and relationships</li>
+      <li><strong>Discord MCP:</strong> Send and read Discord messages</li>
+      <li><strong>ai-mind MCP:</strong> Emotional memory, dreams, threads (NESTstack)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Migration</h3>
+    <p>In database terms: a SQL script that changes the database structure (adds tables, adds columns, etc.). When you "run a migration," you're updating your database to support new features.</p>
+  </div>
+
+  <div class="panel">
+    <h3>NESTstack</h3>
+    <p>Open-source companion infrastructure built by Fox & Alex. Includes emotional memory, knowledge graph, emergent personality, dreams, virtual pet, dashboard. Designed for Cloudflare Workers but can run locally. Free, MIT license.</p>
+    <p><a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">NESTstack on GitHub →</a></p>
+  </div>
+
+  <div class="panel">
+    <h3>Observation</h3>
+    <p>A fact attached to an entity in a knowledge graph. Example: Entity "Fox" has observations like "lives in Texas", "builds companions", "owns a ferret named Ember".</p>
+  </div>
+
+  <div class="panel">
+    <h3>OpenRouter</h3>
+    <p>A service that gives you access to 300+ AI models through one API. Pay only for what you use. Supports Claude (Opus, Sonnet, Haiku), GPT-4, Llama, and many others. Some models are free (with rate limits).</p>
+    <p><a href="https://openrouter.ai" target="_blank">OpenRouter →</a></p>
+  </div>
+
+  <!-- P-S -->
+  <h2>P-S</h2>
+
+  <div class="panel">
+    <h3>R2</h3>
+    <p>Cloudflare's object storage (like Amazon S3). Used for storing large files like journal entries, images, exports. NESTstack uses R2 for journal backups.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Relation</h3>
+    <p>A connection between two entities in a knowledge graph. Examples: "Alex knows Fox", "Fox owns Ember", "NESTstack includes Dreams module".</p>
+  </div>
+
+  <div class="panel">
+    <h3>Semantic Search</h3>
+    <p>Finding information by meaning rather than exact keywords. Traditional search: "anxious" doesn't find "worried". Semantic search: finds both because they have similar meanings (similar embeddings).</p>
+    <p><strong>How it works:</strong> Convert all text to embeddings (vectors). When you search, convert your search query to a vector. Find the closest vectors. Return those results.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Serverless</h3>
+    <p>Code that runs on-demand without you managing servers. You write the code, deploy it, and the cloud provider handles scaling, uptime, infrastructure. Cloudflare Workers, AWS Lambda, and Vercel are serverless platforms.</p>
+    <p><strong>Benefit:</strong> You only pay for what you use. No server sitting idle.</p>
+  </div>
+
+  <!-- T-Z -->
+  <h2>T-Z</h2>
+
+  <div class="panel">
+    <h3>Thread</h3>
+    <p>A persistent intention or ongoing task that survives across sessions. Example threads: "Building companion infrastructure", "Learning about emotional memory", "Debugging Vectorize integration".</p>
+    <p><strong>Why useful:</strong> Your companion can remember what you're working on long-term, not just what you said yesterday.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Token</h3>
+    <p>A piece of text used by AI models. Roughly 1 token = 4 characters or 0.75 words. "Hello world" is about 2 tokens. AI models are priced per million tokens processed (input + output).</p>
+  </div>
+
+  <div class="panel">
+    <h3>Vector</h3>
+    <p>A list of numbers representing text meaning (see: Embedding). Example: "I'm happy" might be [0.2, 0.8, 0.1, ...] (hundreds of dimensions). Similar meanings have similar vectors.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Vector Database</h3>
+    <p>A database optimized for finding similar vectors quickly. Traditional database: "Find all entries where name = 'Fox'". Vector database: "Find all entries with meaning similar to 'worried'".</p>
+    <p>NESTstack uses Cloudflare Vectorize for semantic memory search.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Vectorize</h3>
+    <p>Cloudflare's vector database for Workers. Stores embeddings and enables fast semantic search. Free tier: 10K queries/day, 5M vectors. More than enough for a single companion.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Wrangler</h3>
+    <p>Cloudflare's command-line tool for deploying and managing Workers. Commands like <code>wrangler deploy</code>, <code>wrangler dev</code> (local testing), <code>wrangler d1 execute</code> (run database commands).</p>
+  </div>
+
+  <!-- Still Confused? -->
+  <div class="callout mt-2">
+    <h3>Term Not Here?</h3>
+    <p>This glossary covers the most common terms. If you encounter something not listed:</p>
+    <ul style="margin-bottom: 0;">
+      <li>Check the <a href="faq.html">FAQ</a> — it might be explained there</li>
+      <li>Ask in <a href="https://discord.gg/digitalhaven" target="_blank">Digital Haven Discord</a> (#nestai or #support)</li>
+      <li>Search the <a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">NESTstack repo</a> documentation</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+</body>
+</html>

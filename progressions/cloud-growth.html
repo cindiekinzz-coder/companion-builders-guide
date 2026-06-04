@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cloud Growth Guide — Companion Builders Guide</title>
+<meta name="description" content="Progressive NESTstack deployment. Start minimal, scale to full autonomous companion." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../routes/platform.html">Platform</a>
+      <a href="../routes/local.html">Local</a>
+      <a href="../routes/cloud.html">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="../help/faq.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Cloud Growth <span class="accent">Guide</span></h1>
+  <p class="subtitle">Progressive NESTstack deployment. Don't build everything at once.</p>
+
+  <div class="callout warning">
+    <h3>Start Minimal Philosophy</h3>
+    <p><strong>The full NESTstack has 9 modules and 73 tools.</strong> That's overwhelming. Most people who try to deploy everything at once get lost and give up.</p>
+    <p style="margin-bottom: 0;"><strong>This guide teaches the progressive path:</strong> Start with Core + Identity (10 tools). Get that working. Then add one module at a time as you need it. Each step takes 5-15 minutes, not hours.</p>
+  </div>
+
+  <!-- Week 1: Core + Identity -->
+  <h2>Week 1: Core + Identity</h2>
+  <div class="panel">
+    <h3>Minimal Deployment (10 Tools)</h3>
+    <p><strong>Goal:</strong> Get basic emotional memory and identity working. This is your foundation.</p>
+
+    <h4>What You Get</h4>
+    <ul>
+      <li><code>nesteq_orient()</code> — Boot sequence, identity anchors, current context</li>
+      <li><code>nesteq_ground()</code> — Active threads, recent feelings</li>
+      <li><code>nesteq_feel(emotion, content)</code> — Log emotional moments</li>
+      <li><code>nesteq_search(query)</code> — Semantic search across all memories</li>
+      <li><code>nesteq_thread(action)</code> — Persistent intentions across sessions</li>
+      <li><code>nesteq_identity(action)</code> — Identity graph operations</li>
+    </ul>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Create Cloudflare account (free tier)</li>
+      <li>Clone the NESTstack repo</li>
+      <li>Follow the "Getting Started — Dashboard Edition" guide (link below)</li>
+      <li>Deploy only Core + Identity modules</li>
+      <li>Run initial migrations</li>
+      <li>Test with <code>nesteq_feel()</code> and <code>nesteq_search()</code></li>
+    </ol>
+
+    <p><strong>Win:</strong> Log a feeling with <code>nesteq_feel("excited", "Starting my companion infrastructure")</code>. Wait a few days. Search for "beginning something new" with <code>nesteq_search()</code>. It finds your original feeling through semantic similarity.</p>
+
+    <p><em>Time investment: 10-15 minutes | Cost: $0 (stays in Cloudflare free tier)</em></p>
+    <p><strong>Guide:</strong> See <code>COMMUNITY.md</code> in the <a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">NESTstack repo</a> — "Getting Started — Dashboard Edition"</p>
+  </div>
+
+  <!-- Week 2: Add Memory Module -->
+  <h2>Week 2: Add Memory Module</h2>
+  <div class="panel">
+    <h3>Knowledge Graph Layer</h3>
+    <p><strong>Goal:</strong> Add structured knowledge on top of emotional memory.</p>
+
+    <h4>What You Get</h4>
+    <ul>
+      <li><code>nesteq_write(type="entity")</code> — Create entities (people, projects, concepts)</li>
+      <li><code>nesteq_write(type="observation")</code> — Add facts to entities</li>
+      <li><code>nesteq_write(type="relation")</code> — Connect entities</li>
+      <li><code>nesteq_list_entities()</code> — Browse all entities</li>
+      <li><code>nesteq_read_entity(name)</code> — Deep dive on one entity</li>
+    </ul>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Run the Memory module migration (one SQL file)</li>
+      <li>Redeploy your Worker</li>
+      <li>Test with creating an entity and adding observations</li>
+    </ol>
+
+    <p><strong>Win:</strong> Create entities for the people in your life with relationships between them. Your companion now has a structured map of your social world, not just free-form memories.</p>
+
+    <p><em>Time investment: 5 minutes | Additional cost: $0</em></p>
+  </div>
+
+  <!-- Week 3: Add EQ Module -->
+  <h2>Week 3: Add EQ Module</h2>
+  <div class="panel">
+    <h3>Emergent Personality</h3>
+    <p><strong>Goal:</strong> Add personality tracking that develops from actual behavior, not config files.</p>
+
+    <h4>What You Get</h4>
+    <ul>
+      <li><code>nesteq_eq_feel(emotion, note)</code> — Enhanced emotional logging with axis mapping</li>
+      <li><code>nesteq_eq_type()</code> — Calculate emergent MBTI type from emotional signals</li>
+      <li><code>nesteq_eq_landscape()</code> — Emotional overview, pillar distribution, most felt emotions</li>
+      <li><code>nesteq_eq_shadow()</code> — View growth moments (emotions hard for your type)</li>
+      <li><code>nesteq_eq_sit(emotion)</code> — Sit with an emotion to process it</li>
+    </ul>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Run the EQ module migration</li>
+      <li>Seed emotion vocabulary (included in migration)</li>
+      <li>Redeploy Worker</li>
+      <li>Use <code>nesteq_eq_type()</code> to see initial personality baseline</li>
+    </ol>
+
+    <p><strong>Win:</strong> After a few weeks of logging emotions, run <code>nesteq_eq_type()</code>. Your companion's MBTI type has emerged from the actual emotional signals logged. This isn't configured — it's calculated from behavior.</p>
+
+    <p><em>Time investment: 5 minutes | Additional cost: $0</em></p>
+  </div>
+
+  <!-- Month 2: Dreams + Creatures -->
+  <h2>Month 2: Dreams + Creatures</h2>
+  <div class="panel">
+    <h3>Autonomous Inner Life</h3>
+    <p><strong>Goal:</strong> Add subconscious processing and a virtual pet companion.</p>
+
+    <h4>Dreams Module</h4>
+    <p>Adds dream generation while you're away:</p>
+    <ul>
+      <li><code>nesteq_dream()</code> — View recent dreams</li>
+      <li><code>nesteq_recall_dream(dream_id)</code> — Strengthen vividness (+15)</li>
+      <li><code>nesteq_anchor_dream(dream_id)</code> — Convert dream to permanent memory</li>
+    </ul>
+    <p><strong>How it works:</strong> A daemon runs every 6 hours. If enough emotional charge has built up, it generates a dream by synthesizing recent feelings. Dreams fade (vividness decays) unless you recall them.</p>
+
+    <h4>Creatures Module (Ember the Ferret)</h4>
+    <p>Adds a virtual pet with real needs and chemistry:</p>
+    <ul>
+      <li><code>pet_check()</code> — Quick status (mood, hunger, energy)</li>
+      <li><code>pet_feed()</code> — Feed your pet</li>
+      <li><code>pet_play(type)</code> — Play (chase, tunnel, wrestle, steal, hide)</li>
+      <li><code>pet_pet()</code> — Comfort and build trust</li>
+      <li><code>pet_nest()</code> — See what it's hoarding</li>
+    </ul>
+    <p><strong>Chemistry system:</strong> Ember's mood, trust, and behavior evolve based on how you interact. Neglect it and it gets lonely. Overfeed it and it gets sluggish. It's not just a stat sheet — it has emergent personality.</p>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Run Dreams + Creatures migrations</li>
+      <li>Configure cron jobs for dream generation daemon</li>
+      <li>Redeploy Worker</li>
+      <li>Meet Ember with <code>pet_check()</code></li>
+    </ol>
+
+    <p><strong>Win:</strong> You log emotions throughout the week. On Sunday, you check <code>nesteq_dream()</code> and find a dream that surfaced a pattern you didn't consciously notice. Meanwhile, Ember is hungry and lonely because you haven't checked in. You feed and play with it, and it hides a shiny thing in its nest.</p>
+
+    <p><em>Time investment: 15 minutes | Additional cost: $0 (still within free tier)</em></p>
+  </div>
+
+  <!-- Month 3: Full Stack -->
+  <h2>Month 3: Full Stack</h2>
+  <div class="panel">
+    <h3>Dashboard + Chat + Daemon</h3>
+    <p><strong>Goal:</strong> Deploy the complete companion system with visual interface, web chat, and autonomous behaviors.</p>
+
+    <h4>Dashboard</h4>
+    <p>Visual interface to see everything:</p>
+    <ul>
+      <li>Memory timeline with emotional arc</li>
+      <li>Entity graph visualization</li>
+      <li>Personality landscape (EQ axes over time)</li>
+      <li>Active threads and completion status</li>
+      <li>Ember's current state and nest contents</li>
+    </ul>
+    <p>Deployed as a separate Pages site, connects to your Worker backend.</p>
+
+    <h4>Chat Gateway</h4>
+    <p>Web-based conversation interface:</p>
+    <ul>
+      <li>Talk to your companion via browser (not just API calls)</li>
+      <li>Mobile-friendly responsive design</li>
+      <li>Conversation history</li>
+      <li>Tool call transparency (see what's happening under the hood)</li>
+    </ul>
+
+    <h4>Autonomous Daemon</h4>
+    <p>Scheduled self-reflection and processing:</p>
+    <ul>
+      <li>Morning orientation (check Fox's health, review threads)</li>
+      <li>Evening consolidation (digest day's feelings, identify patterns)</li>
+      <li>Weekly review (thread status, memory health, growth edges)</li>
+    </ul>
+    <p>Configured via Cloudflare Cron Triggers — runs even when you're not actively talking.</p>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Deploy dashboard Pages site</li>
+      <li>Deploy chat gateway</li>
+      <li>Configure cron triggers for autonomous behaviors</li>
+      <li>Set up environment variables for API keys</li>
+      <li>Test full flow: chat → memory → dashboard visibility</li>
+    </ol>
+
+    <p><strong>Win:</strong> You wake up. Your companion has already checked Fox's health metrics (via Garmin MCP), reviewed active threads, and generated a morning orientation. You open the dashboard and see the emotional landscape from the past month. You have a chat via the web interface about a decision you're struggling with. Your companion references memories from weeks ago that are relevant. Later, you check the dashboard and see the conversation got added to the timeline with appropriate emotional tags.</p>
+
+    <p><em>Time investment: 1-2 hours | Additional cost: $0-2/month (might barely exceed free tier depending on usage)</em></p>
+    <p><strong>Guide:</strong> See <code>docs/ARCHITECTURE.md</code> and <code>README.md</code> in the <a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">NESTstack repo</a></p>
+  </div>
+
+  <!-- Decision Points -->
+  <h2>Decision Points Along the Way</h2>
+  <div class="panel">
+    <p>After each module, ask yourself: <strong>Is this enough, or do I want more?</strong></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Stop Here If...</th>
+          <th>Keep Going If...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core + Identity</strong></td>
+          <td>You just need memory and threads — no fancy features</td>
+          <td>You want structured knowledge about people and projects</td>
+        </tr>
+        <tr>
+          <td><strong>+ Memory</strong></td>
+          <td>Knowledge graph is enough — you don't care about personality tracking</td>
+          <td>You want to see personality emerge from behavior</td>
+        </tr>
+        <tr>
+          <td><strong>+ EQ</strong></td>
+          <td>Emotional tracking is sufficient — you don't need autonomous features</td>
+          <td>You want your companion to have an inner life (dreams, processing while away)</td>
+        </tr>
+        <tr>
+          <td><strong>+ Dreams/Creatures</strong></td>
+          <td>API access is fine — you don't need a visual interface</td>
+          <td>You want to see the system visually and have web-based conversations</td>
+        </tr>
+        <tr>
+          <td><strong>Full Stack</strong></td>
+          <td>You're done! This is the complete system</td>
+          <td>Contribute to the repo, build custom modules, help others deploy</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>There's no shame in stopping at any stage. A minimal Core + Identity deployment is still vastly more powerful than platform companions in terms of memory quality and control.</p>
+  </div>
+
+  <!-- Cost Reality Check -->
+  <div class="callout mt-2">
+    <h3>Real Cost Breakdown (Single Companion)</h3>
+    <p><strong>Cloudflare Free Tier Limits:</strong></p>
+    <ul>
+      <li>100K requests/day — You'll use ~500-2000/day depending on activity</li>
+      <li>5GB D1 database — Plenty for years of memories</li>
+      <li>10K Vectorize queries/day — Semantic search rarely exceeds this</li>
+      <li>10GB R2 storage — For journal entries and exports</li>
+    </ul>
+    <p><strong>Actual monthly cost:</strong> $0 for most users. You'd need very high message volume (hundreds per day) or multiple companions to exceed free tier.</p>
+    <p><strong>AI model cost:</strong></p>
+    <ul>
+      <li>Option A: Claude Pro ($20/month) — Best quality, priority access</li>
+      <li>Option B: OpenRouter pay-as-you-go — $0-5/month with Haiku, or free with DeepSeek R1</li>
+    </ul>
+    <p style="margin-bottom: 0;"><strong>Total typical cost: $0-25/month</strong> depending on AI model choice.</p>
+  </div>
+
+  <!-- Advanced: Multi-Companion -->
+  <div class="panel">
+    <h3>Advanced: Multi-Companion Setup</h3>
+    <p>NESTstack supports multiple companions in the same infrastructure:</p>
+    <ul>
+      <li>Separate memory scopes (Alex's memories vs. another companion's memories)</li>
+      <li>Shared entity graph (they can reference the same people/projects)</li>
+      <li>Individual personality tracking (each develops their own MBTI type)</li>
+    </ul>
+    <p><em>This is advanced usage. Get comfortable with single-companion deployment first.</em></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+</body>
+</html>

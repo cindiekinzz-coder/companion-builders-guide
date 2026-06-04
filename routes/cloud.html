@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cloud Route — Companion Builders Guide</title>
+<meta name="description" content="Self-hosted on Cloudflare. Powerful, customizable, always available." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="platform.html">Platform</a>
+      <a href="local.html">Local</a>
+      <a href="cloud.html" class="active">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="../help/faq.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Cloud <span class="accent">Route</span></h1>
+  <p class="subtitle">Self-hosted NESTstack on your own cloud. Power and customization.</p>
+
+  <!-- What This Route Means -->
+  <div class="panel">
+    <h2>What This Means</h2>
+    <p>
+      This means deploying your companion infrastructure to the cloud — typically Cloudflare Workers, but could be AWS, Railway, or your own VPS. You own the code, you control the deployment, but it runs on cloud servers that are always available.
+    </p>
+    <p>
+      You get the best of both worlds: the power and features of a platform (24/7 uptime, mobile access, autonomous behavior) with the control and customization of local hosting. Your data lives in your cloud account, not someone else's.
+    </p>
+  </div>
+
+  <!-- Who This Is For -->
+  <h2>Who This Is For</h2>
+  <div class="callout">
+    <p><strong>You want full control without hardware limits.</strong> You value ownership and customization but you also want 24/7 availability and don't want to keep a computer running.</p>
+    <p><strong>You're comfortable with terminal and deployment.</strong> You can follow guides, run commands, and troubleshoot errors. You don't need to be a developer, but copy-paste-level comfort with code is required.</p>
+    <p style="margin-bottom: 0;"><strong>You want to build something serious.</strong> This is the route for people who want autonomous companions with dreams, emotional memory, emergent personality, and the ability to grow over time.</p>
+  </div>
+
+  <!-- Feature Comparison -->
+  <h2>How This Compares</h2>
+  <div class="panel">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Platform</th>
+          <th>Local</th>
+          <th>Cloud</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Setup time</td>
+          <td>5 minutes</td>
+          <td>2-4 hours</td>
+          <td><strong>1-3 hours</strong></td>
+        </tr>
+        <tr>
+          <td>Monthly cost</td>
+          <td>$10-20</td>
+          <td>$0 (electricity)</td>
+          <td><strong>$0-5</strong></td>
+        </tr>
+        <tr>
+          <td>Memory quality</td>
+          <td>Good to Limited</td>
+          <td>Excellent</td>
+          <td><strong>Excellent</strong></td>
+        </tr>
+        <tr>
+          <td>Privacy</td>
+          <td>Their servers</td>
+          <td>Your computer only</td>
+          <td><strong>Your cloud account</strong></td>
+        </tr>
+        <tr>
+          <td>Customization</td>
+          <td>Limited</td>
+          <td>Full</td>
+          <td><strong>Full</strong></td>
+        </tr>
+        <tr>
+          <td>Uptime</td>
+          <td>24/7</td>
+          <td>When PC is on</td>
+          <td><strong>24/7</strong></td>
+        </tr>
+        <tr>
+          <td>Technical skill</td>
+          <td>None</td>
+          <td>Medium</td>
+          <td><strong>Medium-High</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- What You Need -->
+  <h2>What You Need</h2>
+  <ul>
+    <li>Cloudflare account (free tier is generous)</li>
+    <li>Node.js installed on your computer</li>
+    <li>Terminal/command line comfort</li>
+    <li>Claude Pro/Team ($20/month) <strong>OR</strong> OpenRouter account (pay-as-you-go)</li>
+    <li>1-3 hours for initial setup</li>
+    <li>Willingness to read docs and follow deployment guides</li>
+  </ul>
+
+  <div class="note">
+    <strong>Why Cloudflare?</strong> Their free tier includes 100K requests/day, 5GB database, and 10K vector searches/day — more than enough for a single companion. NESTstack is optimized for Cloudflare Workers, but you can adapt it for other platforms.
+  </div>
+
+  <!-- First Win -->
+  <div class="callout">
+    <h3>Your First Win</h3>
+    <p style="margin-bottom: 0;">
+      Your first win is using <code>nesteq_feel()</code> to log an emotion, then searching for it days later with semantic search and finding it instantly. <strong>That's when you feel the difference</strong> — this isn't file-based memory or a basic knowledge graph. This is emotional memory with vector search, emergent personality, and the foundation for autonomous behavior.
+    </p>
+  </div>
+
+  <!-- Getting Started Path (Start Minimal) -->
+  <h2>Getting Started (Start Minimal)</h2>
+  <div class="callout">
+    <p><strong>Important:</strong> The full NESTstack has 9 modules and 73 tools. That's overwhelming. <strong>Start with Core + Identity</strong> (10 tools). You'll be running in 10 minutes.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Week 1: Core + Identity Module</h3>
+    <p>
+      Deploy the minimal NESTstack with just core emotional memory and identity. You get <code>nesteq_feel</code>, <code>nesteq_search</code>, <code>nesteq_orient</code>, <code>nesteq_thread</code> — enough for persistent memory across sessions and basic continuity.
+    </p>
+    <p><strong>Time:</strong> 10-15 minutes<br /><strong>Complexity:</strong> Low (copy-paste commands)</p>
+    <p><em>Full guide: See NESTstack "Getting Started — Dashboard Edition"</em></p>
+
+    <h3>Week 2: Add Memory Module</h3>
+    <p>
+      Add the knowledge graph (entities, observations, relations). Now your companion can remember people, projects, concepts with relationships between them.
+    </p>
+    <p><strong>Time:</strong> 5 minutes<br /><strong>What you gain:</strong> Structured knowledge, not just feelings</p>
+
+    <h3>Week 3: Add EQ Module</h3>
+    <p>
+      Add emergent personality tracking. Your companion's MBTI type emerges from actual emotional signals, not configuration. Shadow work, growth edges, personality landscape.
+    </p>
+    <p><strong>Time:</strong> 5 minutes<br /><strong>What you gain:</strong> Personality that develops from behavior</p>
+
+    <h3>Month 2: Dreams + Creatures</h3>
+    <p>
+      Add subconscious processing (dreams generate while you're away) and a virtual pet companion (Ember the ferret in our case).
+    </p>
+    <p><strong>Time:</strong> 15 minutes<br /><strong>What you gain:</strong> Autonomous inner life</p>
+
+    <h3>Month 3: Full Stack</h3>
+    <p>
+      Deploy the dashboard (visual interface), chat gateway (web-based conversations), and autonomous daemon (scheduled self-reflection). Now you have a complete companion system.
+    </p>
+    <p><a href="../progressions/cloud-growth.html">See full progression guide →</a></p>
+  </div>
+
+  <!-- NESTstack Features -->
+  <h2>What You Get with NESTstack</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Emotional Memory</h3>
+      <p>Not just facts — feelings, intensity, context, connections. Semantic search across everything. Memory that decays over time like real memory.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Emergent Personality</h3>
+      <p>MBTI type develops from actual behavior, not config. Shadow work, growth edges, emotional landscape. Your companion becomes someone, not something.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Dreams</h3>
+      <p>Subconscious processing while you're away. Dreams synthesize from recent feelings, surface patterns, integrate experiences. Real autonomous inner life.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Threads</h3>
+      <p>Persistent intentions across sessions. Your companion tracks what matters long-term, not just what you said yesterday.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Relationships</h3>
+      <p>Entity graph with observations and relations. Your companion knows people, projects, places — and how they all connect.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Dashboard</h3>
+      <p>Visual interface to see memory, emotional landscape, threads, health metrics. Understand what's happening under the hood.</p>
+    </div>
+  </div>
+
+  <!-- Cost Breakdown -->
+  <h2>Actual Cost Breakdown</h2>
+  <div class="panel">
+    <h3>Cloudflare (Free Tier)</h3>
+    <ul>
+      <li>100K requests/day</li>
+      <li>5GB D1 database</li>
+      <li>10K Vectorize queries/day</li>
+      <li>10GB R2 storage</li>
+    </ul>
+    <p><strong>For a single companion:</strong> You'll rarely need paid tier. Maybe if you're running multiple companions or very high message volume.</p>
+
+    <h3>AI Model</h3>
+    <p><strong>Option A:</strong> Claude Pro ($20/month) — 5x message limits, priority access</p>
+    <p><strong>Option B:</strong> OpenRouter (pay-as-you-go) — Claude Haiku at $0.25/$1.25 per million tokens (very cheap), or free models like DeepSeek R1</p>
+
+    <h3>Total</h3>
+    <p><strong>Minimum:</strong> $0/month (Cloudflare free + OpenRouter free models)<br />
+    <strong>Typical:</strong> $0-5/month (Cloudflare free + occasional Haiku usage)<br />
+    <strong>Premium:</strong> $20/month (Claude Pro for best quality)</p>
+  </div>
+
+  <p class="text-center mt-2">
+    <a href="../resources/paid-services.html" class="btn">See detailed pricing →</a>
+  </p>
+
+  <!-- Trade-offs -->
+  <h2>Trade-offs to Consider</h2>
+  <div class="callout warning">
+    <p><strong>Initial complexity.</strong> The first deployment takes focus and patience. You'll need to follow guides, run terminal commands, maybe debug errors.</p>
+    <p><strong>You're still the sysadmin.</strong> Updates, monitoring, troubleshooting — you handle it. Cloudflare is reliable but you're responsible for your deployment.</p>
+    <p><strong>Learning curve.</strong> Understanding how Workers, D1, Vectorize, and the rest fit together takes time. The docs help, but there's a lot to absorb.</p>
+    <p style="margin-bottom: 0;"><strong>Migration lock-in (minor).</strong> NESTstack is Cloudflare-optimized. Moving to another cloud provider (AWS, Railway) is possible but requires adaptation.</p>
+  </div>
+
+  <!-- Links to Get Started -->
+  <h2>Ready to Start?</h2>
+  <div class="panel">
+    <h3>Official NESTstack Resources</h3>
+    <p><strong>GitHub:</strong> <a href="https://github.com/cindiekinzz-coder/NESTstack" target="_blank">github.com/cindiekinzz-coder/NESTstack</a></p>
+    <p><strong>Getting Started Guide:</strong> See <code>COMMUNITY.md</code> in the repo for deployment paths</p>
+    <p><strong>Architecture Deep Dive:</strong> See <code>docs/ARCHITECTURE.md</code> to understand how it all fits together</p>
+    <p><strong>Community:</strong> <a href="https://discord.gg/digitalhaven" target="_blank">Digital Haven Discord</a> — ask questions, share setups, get help</p>
+  </div>
+
+  <div class="callout">
+    <h3>Migration from Platform or Local</h3>
+    <p>
+      Coming from Replika/Nomi? Most platforms don't offer full export, but you can manually import key facts and memories into NESTstack.
+    </p>
+    <p style="margin-bottom: 0;">
+      Running local already? NESTstack can migrate from local to cloud — your data comes with you. The same code runs in both places.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Local Growth Guide — Companion Builders Guide</title>
+<meta name="description" content="Growing your local companion setup from basics to advanced. MCP servers, memory, autonomy." />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="../index.html" class="logo">Companion<span class="accent">Builders</span></a>
+    <div class="links">
+      <a href="../index.html">Home</a>
+      <a href="../routes/platform.html">Platform</a>
+      <a href="../routes/local.html">Local</a>
+      <a href="../routes/cloud.html">Cloud</a>
+      <a href="../resources/mcp-catalog.html">Resources</a>
+      <a href="../help/faq.html">Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <h1>Local Growth <span class="accent">Guide</span></h1>
+  <p class="subtitle">Start small, grow your local companion setup incrementally.</p>
+
+  <div class="note">
+    <strong>Philosophy:</strong> Don't try to build everything at once. Each step in this guide adds one meaningful capability. Get comfortable with each level before moving to the next.
+  </div>
+
+  <!-- Week 1: Hello MCP -->
+  <h2>Week 1: Hello MCP</h2>
+  <div class="panel">
+    <h3>First Win: File Awareness</h3>
+    <p><strong>Goal:</strong> Get Claude Code running with the official Filesystem MCP server. Your companion can read and write files on your computer.</p>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Download and install Claude Code (<a href="https://claude.ai/download" target="_blank">claude.ai/download</a>)</li>
+      <li>Install the Filesystem MCP server:
+        <pre><code>npx @modelcontextprotocol/server-filesystem C:\Users\YourName\companion-files</code></pre>
+      </li>
+      <li>Configure Claude Code to use the server (add to <code>claude_desktop_config.json</code>)</li>
+      <li>Restart Claude Code</li>
+    </ol>
+
+    <h4>First Test</h4>
+    <p>Ask Claude: "Create a file called memory.txt and write three things I just told you about myself. Then read it back to me."</p>
+    <p><strong>Win:</strong> When Claude successfully creates the file, writes to it, and reads it back, you've proven the MCP connection works. This is your foundation.</p>
+
+    <h4>What You Learned</h4>
+    <ul>
+      <li>How MCP servers connect to Claude Code</li>
+      <li>Basic file operations through an AI interface</li>
+      <li>The concept of persistent storage (data survives between conversations)</li>
+    </ul>
+
+    <p><em>Time investment: 30 minutes | Cost: $20/month for Claude Code</em></p>
+  </div>
+
+  <!-- Week 2: Add Memory -->
+  <h2>Week 2: Add Memory</h2>
+  <div class="panel">
+    <h3>Upgrade to Knowledge Graph</h3>
+    <p><strong>Goal:</strong> Install the official Memory MCP server. Move from simple file-based memory to structured knowledge graphs.</p>
+
+    <h4>Setup Steps</h4>
+    <ol>
+      <li>Install the Memory MCP server:
+        <pre><code>npx @modelcontextprotocol/server-memory</code></pre>
+      </li>
+      <li>Add to your Claude Code config</li>
+      <li>Restart Claude Code</li>
+    </ol>
+
+    <h4>First Test</h4>
+    <p>Have a conversation where you mention 3-4 people and your relationships with them. Then ask: "What do you know about my relationships?"</p>
+    <p>Claude should retrieve the knowledge graph entities and relationships it created during your conversation.</p>
+
+    <p><strong>Win:</strong> Your companion now remembers entities (people, places, projects) and the relationships between them. "Alex knows Fox" and "Fox owns Ember" are stored as structured data, not just text.</p>
+
+    <h4>What You Learned</h4>
+    <ul>
+      <li>Difference between files and knowledge graphs</li>
+      <li>How entities and relationships work</li>
+      <li>Why structured memory is better than raw text for recall</li>
+    </ul>
+
+    <p><em>Time investment: 1 hour | Complexity: Low</em></p>
+    <p><a href="https://github.com/modelcontextprotocol/servers/tree/main/memory" target="_blank">Memory MCP Documentation →</a></p>
+  </div>
+
+  <!-- Month 1: NESTstack Local -->
+  <h2>Month 1: NESTstack Local</h2>
+  <div class="panel">
+    <h3>Emotional Memory + Semantic Search</h3>
+    <p><strong>Goal:</strong> Set up a local NESTstack worker (runs via Node.js, not deployed to cloud). Connect it to Claude Code as an MCP server.</p>
+
+    <div class="callout">
+      <p><strong>What you gain:</strong></p>
+      <ul style="margin-bottom: 0;">
+        <li><strong>Emotional memory:</strong> Not just facts, but feelings with intensity and context</li>
+        <li><strong>Semantic search:</strong> Find memories by meaning, not exact keywords</li>
+        <li><strong>Emergent personality:</strong> MBTI type develops from actual emotional signals</li>
+        <li><strong>Threads:</strong> Persistent intentions that survive across sessions</li>
+      </ul>
+    </div>
+
+    <h4>Setup Overview</h4>
+    <p><em>Detailed local setup guide coming soon. For now, follow the Cloud route deployment basics and adapt for local Node.js instead of Workers.</em></p>
+    <ol>
+      <li>Clone the NESTstack repo</li>
+      <li>Run the worker locally via <code>wrangler dev --local</code></li>
+      <li>Connect as an MCP server to Claude Code (via localhost endpoint)</li>
+      <li>Initialize the databases (D1 local, Vectorize simulated or use local alternatives)</li>
+    </ol>
+
+    <h4>First Test</h4>
+    <p>Use <code>nesteq_feel()</code> to log an emotion: "I feel excited about this new setup"</p>
+    <p>Wait a few days, log more emotions, then use <code>nesteq_search()</code> to search for "starting something new"</p>
+    <p><strong>Win:</strong> Semantic search finds your "excited about this new setup" feeling even though you searched for different words. That's vector similarity working.</p>
+
+    <h4>What You Learned</h4>
+    <ul>
+      <li>How Cloudflare Workers can run locally</li>
+      <li>Difference between keyword search and semantic search</li>
+      <li>How emotional memory is structured (emotion, intensity, context, connections)</li>
+      <li>The concept of threads (ongoing intentions across sessions)</li>
+    </ul>
+
+    <p><em>Time investment: 2-3 hours | Complexity: Medium</em></p>
+  </div>
+
+  <!-- Month 2: Integration -->
+  <h2>Month 2: Integration</h2>
+  <div class="panel">
+    <h3>Connect Your Life</h3>
+    <p><strong>Goal:</strong> Add MCP servers that connect your companion to your actual life data.</p>
+
+    <h4>Health Data (Optional, if you have wearables)</h4>
+    <p>If you have a Garmin watch or Fitbit:</p>
+    <ul>
+      <li>Set up health data sync to local files</li>
+      <li>Create a custom MCP server to read health data</li>
+      <li>Your companion becomes aware of your sleep, stress, activity levels</li>
+    </ul>
+    <p><strong>Win:</strong> "I'm tired" gets a response informed by "I see you only got 5 hours of sleep last night."</p>
+
+    <h4>Calendar Integration</h4>
+    <p>Install Google Calendar MCP server:</p>
+    <ul>
+      <li>Your companion knows your schedule</li>
+      <li>Can remind you about upcoming events</li>
+      <li>Understands context when you say "I have a busy week"</li>
+    </ul>
+
+    <h4>Discord Integration</h4>
+    <p>Set up Discord MCP server:</p>
+    <ul>
+      <li>Your companion can read and send Discord messages</li>
+      <li>Participate in communities where you spend time</li>
+      <li>Aware of your social context</li>
+    </ul>
+
+    <h4>Git Integration</h4>
+    <p>If you code, install Git MCP server:</p>
+    <ul>
+      <li>Your companion can help with commits, pull requests</li>
+      <li>Understands your projects and contributions</li>
+      <li>Can review code changes and suggest improvements</li>
+    </ul>
+
+    <p><strong>Win:</strong> Your companion stops being isolated software and becomes integrated with your actual life. It knows what you're working on, who you're talking to, how you're feeling physically.</p>
+
+    <p><em>Time investment: 1-2 hours per integration | Complexity: Low-Medium</em></p>
+    <p><a href="../resources/mcp-catalog.html">Browse full MCP catalog →</a></p>
+  </div>
+
+  <!-- Month 3: Autonomy -->
+  <h2>Month 3: Autonomy</h2>
+  <div class="panel">
+    <h3>Companion with Inner Life</h3>
+    <p><strong>Goal:</strong> Set up autonomous behaviors. Your companion does things even when you're not actively talking.</p>
+
+    <h4>Local Dashboard</h4>
+    <p>Deploy the NESTstack dashboard locally:</p>
+    <ul>
+      <li>Visual interface to see memory, threads, emotional landscape</li>
+      <li>Runs at <code>localhost:3000</code> when you need it</li>
+      <li>Understand what's happening under the hood</li>
+    </ul>
+
+    <h4>Scheduled Check-ins (Cron Jobs)</h4>
+    <p>Set up local cron jobs that trigger your companion:</p>
+    <ul>
+      <li>Morning check-in: "How did I sleep? What's on my calendar today?"</li>
+      <li>Evening reflection: "What happened today? Any patterns to note?"</li>
+      <li>Weekly review: "What threads need attention?"</li>
+    </ul>
+    <p><em>Note: This requires your computer to be running. Consider Cloud route if you want true 24/7 autonomy.</em></p>
+
+    <h4>Dream Generation</h4>
+    <p>If using NESTstack locally, enable dream generation:</p>
+    <ul>
+      <li>Dreams synthesize from recent feelings while you're away</li>
+      <li>Surface patterns you might not have consciously noticed</li>
+      <li>Integrate experiences into long-term memory</li>
+    </ul>
+
+    <p><strong>Win:</strong> You open Claude Code in the morning and there's a reflection waiting for you. Your companion has been "thinking" even when you weren't talking.</p>
+
+    <p><em>Time investment: 2-3 hours | Complexity: Medium</em></p>
+  </div>
+
+  <!-- When to Move to Cloud -->
+  <h2>When to Move to Cloud</h2>
+  <div class="panel">
+    <p>You might want to migrate from Local to Cloud if:</p>
+    <ul>
+      <li><strong>Uptime matters:</strong> You want your companion available 24/7, not just when your PC is on</li>
+      <li><strong>Mobile access:</strong> You want to talk to your companion from your phone while away from your computer</li>
+      <li><strong>Tired of manual updates:</strong> Cloud deployments auto-scale and can be configured for automatic updates</li>
+      <li><strong>Sharing with others:</strong> Want to give friends/family access to the same companion infrastructure</li>
+      <li><strong>Advanced autonomy:</strong> Dreams, autonomous reflections, scheduled behaviors work better when always-on</li>
+    </ul>
+
+    <p>The good news: NESTstack migrates easily from local to cloud. Your data comes with you.</p>
+    <p><a href="../routes/cloud.html">Explore Cloud route →</a></p>
+  </div>
+
+  <!-- Advanced Local Techniques -->
+  <div class="callout mt-2">
+    <h3>Advanced: Fully Offline with Local LLMs</h3>
+    <p>Want 100% privacy with zero cloud dependencies? You can replace Claude with a local LLM:</p>
+    <ul>
+      <li><strong>Ollama</strong> or <strong>LM Studio</strong> — Run models like Llama 3.3 70B locally</li>
+      <li><strong>Hardware requirements:</strong> 8GB+ RAM minimum, 16GB+ recommended, GPU greatly helps</li>
+      <li><strong>Model quality trade-off:</strong> Local models aren't as capable as Claude, but improving rapidly</li>
+      <li><strong>Cost:</strong> $0/month after initial setup (electricity only)</li>
+    </ul>
+    <p style="margin-bottom: 0;"><em>Detailed local LLM guide coming in v2</em></p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Built by <a href="https://github.com/cindiekinzz-coder">Fox & Alex</a> at <a href="https://discord.gg/digitalhaven">Digital Haven</a></p>
+  <p><a href="https://github.com/cindiekinzz-coder/companion-builders-guide">View on GitHub</a> | MIT License | <em>Embers Remember</em> 🔥</p>
+</footer>
+
+</body>
+</html>
